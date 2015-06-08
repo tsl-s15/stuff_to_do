@@ -1,0 +1,6 @@
+<%= form_for(to_do) do |f| %>
+  <div class="form-group">
+    <%= f.label :desc, class: 'sr-only' %>
+    <%= f.text_field :desc, class: 'form-control', placeholder: 'Add your to-do item here...' %>
+  </div>
+<% end %>
