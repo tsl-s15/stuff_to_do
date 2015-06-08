@@ -1,6 +1,15 @@
-<%= form_for(to_do) do |f| %>
+<% if to_do.id %>
+  <%= form_for(to_do, remote: true, html: { class: "inline-form edit_to_do_#{to_do.id}"}) do |f| %>
+    <div class="form-group">
+      <%= f.label :desc, class: 'sr-only' %>
+      <%= f.text_field :desc, class: 'form-control', placeholder: 'Add your to-do item here...' %>
+    </div>
+  <% end %>
+<% else %>
+  <%= form_for(to_do, remote: true) do |f| %>
   <div class="form-group">
     <%= f.label :desc, class: 'sr-only' %>
     <%= f.text_field :desc, class: 'form-control', placeholder: 'Add your to-do item here...' %>
   </div>
+  <% end %>
 <% end %>

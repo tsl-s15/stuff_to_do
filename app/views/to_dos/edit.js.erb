@@ -1,0 +1,2 @@
+$('li#to_do_<%= @to_do.id %> span.desc').remove();
+$('li#to_do_<%= @to_do.id %>').prepend('<%= j(render('form', to_do: @to_do)) %>');

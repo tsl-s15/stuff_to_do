@@ -1,0 +1,5 @@
+$('ul').append('<%= j(render('to_do', to_do: @to_do)) %>');
+$('#to_do_desc').val('');
+
+$('li#to_do_<%= @to_do.id %>').hide();
+$('li#to_do_<%= @to_do.id %>').fadeIn();
