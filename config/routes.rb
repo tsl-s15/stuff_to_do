@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root 'to_dos#index'
   resources :to_dos
   get "/toggle_checkbox/:to_do_id" => "to_dos#toggle_checkbox", as: 'toggle_checkbox'
+  patch "/re_sort" => 'to_dos#re_sort', as: 're_sort'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

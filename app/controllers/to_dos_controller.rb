@@ -55,6 +55,11 @@ class ToDosController < ApplicationController
     respond_to do |format|
       format.js
     end
+  end
+
+  def re_sort
+
+    render :nothing => true, :status => 200, :content_type => 'text/html'
 
   end
 

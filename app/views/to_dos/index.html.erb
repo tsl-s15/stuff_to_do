@@ -16,6 +16,13 @@
 <script>
   $('ul').sortable({
     axis: "y",
-    opacity: 0.7
+    opacity: 0.7,
+    update: function() {
+      $.ajax({
+        url: "<%= re_sort_url %>",
+        type: 'PATCH',
+        data: $('ul').sortable('serialize'),
+      });
+    }
   });
 </script>
