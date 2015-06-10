@@ -40,6 +40,10 @@ class ToDosController < ApplicationController
     end
   end
 
+  def toggle_checkbox
+
+  end
+
   private
 
     def to_do_params
