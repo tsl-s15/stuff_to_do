@@ -41,6 +41,16 @@ class ToDosController < ApplicationController
   end
 
   def toggle_checkbox
+    @to_do = ToDo.find(params[:to_do_id])
+    @to_do.completed == true ? @to_do.completed = false : @to_do.completed = true
+    # if @to_do.completed == true
+    #   @to_do.completed = false
+    # else
+    #   @to_do.completed = true
+    # end
+
+    puts @to_do.inspect
+    @to_do.save
 
   end
 
