@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'
+gem 'jquery-ui-rails'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
