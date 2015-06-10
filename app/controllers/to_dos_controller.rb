@@ -4,7 +4,7 @@ class ToDosController < ApplicationController
   end
 
   def create
-    @to_do = ToDo.new(todo_params)
+    @to_do = ToDo.new(to_do_params)
     respond_to do |format|
       if @to_do.save
         format.html { redirect_to root_url }
@@ -31,9 +31,18 @@ class ToDosController < ApplicationController
     end
   end
 
+  def update
+    @to_do = ToDo.find(params[:id])
+    @to_do.update_attributes(to_do_params)
+
+    respond_to do |format|
+      format.js
+    end
+  end
+
   private
 
-    def todo_params
+    def to_do_params
       params.require(:to_do).permit(:desc)
     end
 end

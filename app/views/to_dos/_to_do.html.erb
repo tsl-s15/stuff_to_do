@@ -1,4 +1,9 @@
 <li id="to_do_<%= to_do.id %>" class="list-group-item">
+  <% if to_do.completed %>
+    <span class"checkbox_<%= to_do.id %>"><%= icon('check-square-o','', class: 'fa-2x') %></span>
+  <% else %>
+    <span class"checkbox_<%= to_do.id %>"><%= icon('square-o','', class: 'fa-2x') %></span>
+  <% end %>
   <span class="desc"><%= to_do.desc %></span>
   <div class="pull-right">
     <a href="<%= edit_to_do_url(to_do) %>" class="btn btn-warning" data-remote="true"><%= icon('pencil-square-o') %></a>
