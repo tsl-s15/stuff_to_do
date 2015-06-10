@@ -1,5 +1,5 @@
 <li id="to_do_<%= to_do.id %>" class="list-group-item">
-  <span class="checkbox_<%= to_do.id %> pull-left">
+  <span class="pull-left to-do-checkbox">
     <%= link_to toggle_checkbox_url(to_do.id), remote: true do  %>
       <% if to_do.completed %>
         <%= icon('check-square-o','', class: 'fa-2x') %>

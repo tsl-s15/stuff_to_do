@@ -52,6 +52,10 @@ class ToDosController < ApplicationController
     puts @to_do.inspect
     @to_do.save
 
+    respond_to do |format|
+      format.js
+    end
+
   end
 
   private
