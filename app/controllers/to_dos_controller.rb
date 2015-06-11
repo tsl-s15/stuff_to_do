@@ -1,6 +1,6 @@
 class ToDosController < ApplicationController
   def index
-    @to_dos = ToDo.all
+    @to_dos = ToDo.order(:position  )
   end
 
   def create
@@ -58,6 +58,12 @@ class ToDosController < ApplicationController
   end
 
   def re_sort
+    params[:to_do].each_with_index do |id, index|
+      to_do = ToDo.find(id)
+      to_do.position = index + 1
+      to_do.save
+    end
+
 
     render :nothing => true, :status => 200, :content_type => 'text/html'
 
