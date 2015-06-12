@@ -7,6 +7,9 @@ class ToDosController < ApplicationController
     @to_do = ToDo.new(to_do_params)
     respond_to do |format|
       if @to_do.save
+        client = Twilio::REST::Client.new(Rails.application.secrets.twilio_account_sid, Rails.application.secrets.twilio_auth_token)
+        message = client.messages.create(from: "(713) 597-6652", to: "(281) 682-4786", body: "You've added a new to-do: #{@to_do.desc}")
+
         format.html { redirect_to root_url }
         format.js
       else

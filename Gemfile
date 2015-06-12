@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'
 gem 'jquery-ui-rails'
+gem 'twilio-ruby'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
