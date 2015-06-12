@@ -4,6 +4,8 @@ gem 'bootstrap-sass'
 gem 'font-awesome-sass'
 gem 'jquery-ui-rails'
 gem 'twilio-ruby'
+gem 'devise'
+gem 'omniauth-facebook'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

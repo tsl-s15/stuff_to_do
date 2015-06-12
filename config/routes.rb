@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+
+
   root 'to_dos#index'
   resources :to_dos
   get "/toggle_checkbox/:to_do_id" => "to_dos#toggle_checkbox", as: 'toggle_checkbox'

@@ -14,14 +14,14 @@
 
 
 <script>
-  $('ul').sortable({
+  $('ul.list-group').sortable({
     axis: "y",
     opacity: 0.7,
     update: function() {
       $.ajax({
         url: "<%= re_sort_url %>",
         type: 'PATCH',
-        data: $('ul').sortable('serialize'),
+        data: $('ul.list-group').sortable('serialize'),
       });
     }
   });

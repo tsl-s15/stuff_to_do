@@ -1,4 +1,4 @@
-$('ul').append('<%= j(render('to_do', to_do: @to_do)) %>');
+$('ul.list-group').append('<%= j(render('to_do', to_do: @to_do)) %>');
 $('#to_do_desc').val('');
 
 $('li#to_do_<%= @to_do.id %>').hide();
